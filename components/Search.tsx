@@ -18,7 +18,7 @@ const Search = () => {
       <div className="results">
         {saveData &&
           saveData.map((item, idx) => {
-            return <div>{item}</div>;
+            return <div key={idx}>{item}</div>;
           })}
       </div>
     </div>
