@@ -2,7 +2,6 @@ import { useRef, useState } from 'react';
 
 const useSearchBar = () => {
   const [saveData, setSaveData] = useState<string[]>([]);
-  const [searchText, setSearchText] = useState<string>('');
   const timePointer = useRef<number | null>(null);
 
   const save = (val: string) => {
@@ -10,8 +9,6 @@ const useSearchBar = () => {
   };
 
   const handler = (val: string) => {
-    setSearchText(val);
-
     if (timePointer.current) clearTimeout(timePointer.current);
 
     timePointer.current = setTimeout(() => save(val), 600);

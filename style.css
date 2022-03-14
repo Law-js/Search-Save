@@ -20,7 +20,10 @@ body {
 .searchBar {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+}
+
+hr {
+  margin: 30px 0;
 }
 
 .searchBar input {
